@@ -1,0 +1,46 @@
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, IconButton } from '@mui/material';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { CarrinhoContext } from '../context/Carrinho';
+
+function MyCard() {
+
+    const {qtdItem, setQtdItem} = React.useContext(CarrinhoContext)
+
+    return (
+        <div>
+            <Card sx={{ maxWidth: 345, margin: '20px' }}>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        image="https://www.sabornamesa.com.br/media/k2/items/cache/b9ad772005653afce4d4bd46c2efe842_XL.jpg"
+                        alt="Hamburguer"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            Hamburguer
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" style={{marginBottom: '12px'}}>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, natus. Magni est!
+                        </Typography>
+                        <Typography>
+                            <Button variant="outlined" onClick={() => {setQtdItem(qtdItem + 1)}}>
+                                <IconButton color="primary" aria-label="add to shopping cart">
+                                    <AddShoppingCartIcon />
+                                </IconButton>
+                                <p>Adicionar</p>
+                            </Button>
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        </div>
+    )
+}
+
+export default MyCard;
