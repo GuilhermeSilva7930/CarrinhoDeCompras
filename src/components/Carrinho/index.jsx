@@ -9,7 +9,7 @@ export default function Carrinho() {
 
     return (
         <IconButton color="primary" aria-label="add to shopping cart">
-            <AddShoppingCartIcon /> <small style={{ fontSize: '.5em', marginTop: '18px', color: 'green' }}>{qtdItem === 0 ? '' : qtdItem }</small>
+            <AddShoppingCartIcon /> <small>{qtdItem === 0 ? '' : qtdItem }</small>
         </IconButton>
     )
 }

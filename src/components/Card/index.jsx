@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, IconButton } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { CarrinhoContext } from '../context/Carrinho';
+import './index.css'
 
 function MyCard() {
 
