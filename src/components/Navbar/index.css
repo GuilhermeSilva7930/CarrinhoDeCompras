@@ -25,3 +25,8 @@ header {
 .imgLogin {
     width: 23px;
 }
+
+.link {
+    text-decoration: none;
+    color: black;
+}

@@ -2,6 +2,7 @@ import { IconButton } from "@mui/material";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useContext } from "react";
 import { CarrinhoContext } from "../context/Carrinho";
+import './index.css'
 
 export default function Carrinho() {
 
@@ -9,7 +10,7 @@ export default function Carrinho() {
 
     return (
         <IconButton color="primary" aria-label="add to shopping cart">
-            <AddShoppingCartIcon /> <small>{qtdItem === 0 ? '' : qtdItem }</small>
+            <AddShoppingCartIcon /> <small>{qtdItem === 0 ? '' : qtdItem}</small>
         </IconButton>
     )
 }
