@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, IconButton } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { CarrinhoContext } from '../context/Carrinho';
+import Lanche from '../../assets/img/lanche.jpg'
 import './index.css'
 
 function MyCard() {
@@ -19,7 +20,7 @@ function MyCard() {
                     <CardMedia
                         component="img"
                         height="140"
-                        image="https://www.sabornamesa.com.br/media/k2/items/cache/b9ad772005653afce4d4bd46c2efe842_XL.jpg"
+                        image={Lanche}
                         alt="Hamburguer"
                     />
                     <CardContent>
