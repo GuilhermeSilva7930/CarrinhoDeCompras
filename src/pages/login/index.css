@@ -1,0 +1,16 @@
+.input {
+    width: 350px;
+    transition: all ease-in-out .3s;
+}
+
+@media(max-width: 380px) {
+    .input {
+        width: 250px;
+    }
+}
+
+@media(max-width: 280px) {
+    .input {
+        width: 200px;
+    }
+}
