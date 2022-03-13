@@ -15,7 +15,7 @@ export default function Navbar() {
                         <h3 id='logo-text'>FoodHouse</h3>
                     </div>
                 </Link>
-                <div>
+                <div className='nav-icons'>
                     <Link to='/login'>
                         <IconButton>
                             <img src={ImgLogin} alt="" className='imgLogin' />

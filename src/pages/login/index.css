@@ -1,6 +1,7 @@
 .input {
     width: 350px;
     transition: all ease-in-out .3s;
+    margin-top: 10px !important;
 }
 
 @media(max-width: 380px) {

@@ -30,3 +30,8 @@ header {
     text-decoration: none;
     color: black;
 }
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}

@@ -44,7 +44,6 @@ export default function Login() {
             <Grid sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: 'calc(100vh - 65px)' }}>
                 <img src={Logo} alt="Logo FoodHouse" className='imgLogo' />
                 <TextField className="input"
-                    sx={{ marginTop: '10px' }}
                     id="input-with-icon-textfield"
                     label="Usuario"
                     InputProps={{
