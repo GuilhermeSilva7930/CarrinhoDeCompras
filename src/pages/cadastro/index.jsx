@@ -5,10 +5,10 @@ import { FormControl, Grid, IconButton, Input, InputAdornment, InputLabel, TextF
 import { AccountCircle, Visibility, VisibilityOff } from "@mui/icons-material";
 import LoadingButton from '@mui/lab/LoadingButton';
 import Logo from '../../assets/img/hamburger-icon.svg'
-import './index.css'
 import { Link } from "react-router-dom";
+import '../login/index.css'
 
-export default function Login() {
+export default function Cadastro() {
 
     const [values, setValues] = useState({
         amount: '',
@@ -28,10 +28,34 @@ export default function Login() {
             showPassword: !values.showPassword,
         });
     };
-
+    
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
+
+    const [values2, setValues2] = useState({
+        amount: '',
+        password: '',
+        weight: '',
+        weightRange: '',
+        showPassword: false,
+    });
+
+    const handleChange2 = (prop) => (event) => {
+        setValues2({ ...values2, [prop]: event.target.value });
+    };
+
+    const handleClickShowPassword2 = () => {
+        setValues2({
+            ...values2,
+            showPassword: !values2.showPassword,
+        });
+    };
+
+    const handleMouseDownPassword2 = (event) => {
+        event.preventDefault();
+    };
+
 
     const [loading, setLoading] = useState(false);
 
@@ -44,10 +68,9 @@ export default function Login() {
             <Navbar></Navbar>
             <Grid sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: 'calc(100vh - 65px)' }}>
                 <img src={Logo} alt="Logo FoodHouse" className='imgLogo' />
-                <TextField className="input"
-                    required
+                <TextField required className="input"
                     id="input-with-icon-textfield"
-                    label="Usuario"
+                    label="Digite um nome de Usuario"
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
@@ -60,11 +83,11 @@ export default function Login() {
                 <FormControl className="input" variant="standard">
                     <InputLabel htmlFor="standard-adornment-password">Senha</InputLabel>
                     <Input
-                        required
                         id="standard-adornment-password"
                         type={values.showPassword ? 'text' : 'password'}
                         value={values.password}
                         onChange={handleChange('password')}
+                        required
                         endAdornment={
                             <InputAdornment position="end">
                                 <IconButton
@@ -78,6 +101,27 @@ export default function Login() {
                         }
                     />
                 </FormControl>
+                <FormControl className="input" variant="standard">
+                    <InputLabel htmlFor="standard-adornment-password">Confirme a Senha</InputLabel>
+                    <Input
+                        id="standard-adornment-password"
+                        type={values2.showPassword ? 'text' : 'password'}
+                        value={values2.password}
+                        onChange={handleChange2('password')}
+                        required
+                        endAdornment={
+                            <InputAdornment position="end">
+                                <IconButton
+                                    aria-label="toggle password visibility"
+                                    onClick={handleClickShowPassword2}
+                                    onMouseDown={handleMouseDownPassword2}
+                                >
+                                    {values2.showPassword ? <VisibilityOff /> : <Visibility />}
+                                </IconButton>
+                            </InputAdornment>
+                        }
+                    />
+                </FormControl>
                 <LoadingButton
                     className="input"
                     sx={{ marginTop: '10px' }}
@@ -86,10 +130,10 @@ export default function Login() {
                     loadingIndicator="Carregando..."
                     variant="outlined"
                 >
-                    Entrar
+                    Cadastrar
                 </LoadingButton>
-                <Link to='/cadastrar'>
-                    <p>Não tem uma conta? Registre-se</p>
+                <Link to='/login'>
+                    <p>Já tem uma conta? Entre</p>
                 </Link>
             </Grid>
         </CarrinhoProvider>

@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { CarrinhoContext } from "../context/Carrinho";
 import './index.css'
 import { Box } from "@mui/system";
+import ItensCarrinho from "../ItensCarrinho";
 
 export default function Carrinho() {
 
@@ -26,7 +27,7 @@ export default function Carrinho() {
         right: 0,
         left: -265,
         zIndex: 1,
-        border: '1px solid',
+        border: '1px solid #8cbae8',
         p: 1,
         backgroundColor: 'white',
         width: '300px'
@@ -42,7 +43,11 @@ export default function Carrinho() {
                 </div>
                 {open ? (
                     <Box className='modalCarrinho' sx={styles}>
-                        {qtdItem === 0 ? 'Não tem nenhum item na lista' : 'Foram adicionados ' + qtdItem + ' itens nas lista'}
+                        {qtdItem === 0 ? 'Carrinho Vazio' : 
+                        <div>
+                            <ItensCarrinho></ItensCarrinho>
+                        </div>
+                        }
                     </Box>
                 ) : null}
             </Box>

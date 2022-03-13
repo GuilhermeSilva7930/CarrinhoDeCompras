@@ -1,0 +1,18 @@
+.listaItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#qtd {
+    color: red;
+}
+
+.moreLess {
+    width: 25px;
+    margin: 0 5px;
+}
+
+#itemListaNome {
+    margin-left: 5px;
+}

@@ -8,6 +8,8 @@ small {
 .modalCarrinho {
     width: 300px !important;
     transition: all ease-in-out .3s !important;
+    border-radius: 3px;
+    box-shadow: 0px 0px 7px #8cbae893;
 }
 
 @media(max-width: 357px) {
