@@ -6,8 +6,10 @@ export default function CarrinhoProvider({ children }) {
 
     const [qtdItem, setQtdItem] = useState(0)
 
+    const [open, setOpen] = useState(false);
+
     return (
-        <CarrinhoContext.Provider value={{qtdItem, setQtdItem}}>
+        <CarrinhoContext.Provider value={{qtdItem, setQtdItem, open, setOpen}}>
             {children}
         </CarrinhoContext.Provider>
     )

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ClickAwayListener, IconButton } from "@mui/material";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useContext } from "react";
@@ -9,9 +9,7 @@ import ItensCarrinho from "../ItensCarrinho";
 
 export default function Carrinho() {
 
-    const { qtdItem } = useContext(CarrinhoContext)
-
-    const [open, setOpen] = useState(false);
+    const { qtdItem, open, setOpen } = useContext(CarrinhoContext)
 
     const handleClick = () => {
         setOpen((prev) => !prev);
