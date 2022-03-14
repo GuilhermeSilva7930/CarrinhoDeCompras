@@ -23,7 +23,7 @@ export default function Carrinho() {
         position: 'absolute',
         top: 45,
         right: 0,
-        left: -265,
+        left: -325,
         zIndex: 1,
         border: '1px solid #8cbae8',
         p: 1,

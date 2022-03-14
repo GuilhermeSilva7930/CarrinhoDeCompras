@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -10,7 +10,7 @@ import Lanche from '../../assets/img/lanche.jpg'
 
 function MyCard() {
 
-    const {qtdItem, setQtdItem} = React.useContext(CarrinhoContext)
+    const { qtdItem, setQtdItem } = useContext(CarrinhoContext)
 
     return (
         <div>
@@ -26,11 +26,14 @@ function MyCard() {
                         <Typography gutterBottom variant="h5" component="div">
                             Hamburguer
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" style={{marginBottom: '12px'}}>
+                        <Typography variant="body2" color="text.secondary" style={{ marginBottom: '12px' }}>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, natus. Magni est!
                         </Typography>
+                        <Typography style={{ marginBottom: '12px' }}>
+                            <strong id='preco'>R$ 9,99</strong>
+                        </Typography>
                         <Typography>
-                            <Button variant="outlined" onClick={() => {setQtdItem(qtdItem + 1)}}>
+                            <Button variant="outlined" onClick={() => { setQtdItem(qtdItem + 1) }}>
                                 <IconButton color="primary" aria-label="add to shopping cart">
                                     <AddShoppingCartIcon />
                                 </IconButton>
