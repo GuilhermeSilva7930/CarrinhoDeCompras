@@ -36,7 +36,9 @@ export default function Login() {
     const [loading, setLoading] = useState(false);
 
     function handleClick() {
-        setLoading(true);
+        if(values.password !== '') {
+            setLoading(true);
+        }
     }
 
     return (

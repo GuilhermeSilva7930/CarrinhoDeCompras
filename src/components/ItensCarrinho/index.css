@@ -11,6 +11,13 @@
 .moreLess {
     width: 25px;
     margin: 0 5px;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all ease-in-out .3s;
+}
+
+.moreLess:hover {
+    box-shadow: 0px 0px 7px #00000054;
 }
 
 #itemListaNome {

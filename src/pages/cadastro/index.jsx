@@ -28,7 +28,7 @@ export default function Cadastro() {
             showPassword: !values.showPassword,
         });
     };
-    
+
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
@@ -60,7 +60,9 @@ export default function Cadastro() {
     const [loading, setLoading] = useState(false);
 
     function handleClick() {
-        setLoading(true);
+        if (values.password && values2.password !== '' && values.password === values2.password) {
+            setLoading(true);
+        }
     }
 
     return (
@@ -83,7 +85,6 @@ export default function Cadastro() {
                 <FormControl className="input" variant="standard">
                     <InputLabel htmlFor="standard-adornment-password">Senha</InputLabel>
                     <Input
-                        id="standard-adornment-password"
                         type={values.showPassword ? 'text' : 'password'}
                         value={values.password}
                         onChange={handleChange('password')}
